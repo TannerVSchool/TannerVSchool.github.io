@@ -4,7 +4,7 @@ app.controller("MainController", ["$scope", "toDoService", "$http", function($sc
 
   $scope.toDoList = [];
   $scope.newTodo = {};
-  var baseUrl = "http://mean.codingcamp.us/tanner/todo/"
+  var baseUrl = "https://mean.codingcamp.us/tanner/todo/"
 
   $scope.getTodos = function() {
     toDoService.getTodos().then(function(data) {
@@ -28,7 +28,7 @@ app.controller("MainController", ["$scope", "toDoService", "$http", function($sc
   }
 
   $scope.updateTodo = function(task, index) {
-    $http.put("http://mean.codingcamp.us/tanner/todo/" + task._id, task).then(function(result) {
+    $http.put("https://mean.codingcamp.us/tanner/todo/" + task._id, task).then(function(result) {
       var updatedTodo = result.data;
       updatedTodo.isBeingEdited = false;
       $scope.toDoList[index] = updatedTodo;

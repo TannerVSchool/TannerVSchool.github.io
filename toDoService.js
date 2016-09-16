@@ -1,7 +1,7 @@
 var app = angular.module("HttpApp");
 
 app.service("toDoService", function($http) {
-    var baseUrl = "http://mean.codingcamp.us/tanner/todo/"
+    var baseUrl = "https://mean.codingcamp.us/tanner/todo/"
 
 
     this.getTodos = function() {
